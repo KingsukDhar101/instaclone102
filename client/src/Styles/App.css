@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+
+a {
+  color: black !important;
+}
+
+#toast-container {
+  top: 30px !important;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}

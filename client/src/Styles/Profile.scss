@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* display: none; */
+}
+
+.p-container {
+  max-width: 900px;
+  margin: 0px auto;
+  .container {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0px;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    .container-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      button#updatepic{
+        margin: 5px 0;
+        width: 8.5em;
+      }
+    }
+    .container-right {
+      width: 22em;
+      text-align: center;
+      .stats {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .item {
+      width: 100px;
+      height: 100px;
+      margin: 3px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+}

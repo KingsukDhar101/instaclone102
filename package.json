@@ -1,0 +1,33 @@
+{
+  "name": "app3_instaclone",
+  "version": "1.0.0",
+  "engines": {
+    "node": "16.13.0",
+    "npm": "8.1.0"
+  },
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.13",
+    "nodemon": "^2.0.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingsukDhar101/instagram-clone-101.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KingsukDhar101/instagram-clone-101/issues"
+  },
+  "homepage": "https://github.com/KingsukDhar101/instagram-clone-101#readme"
+}
