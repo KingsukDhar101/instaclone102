@@ -21,7 +21,7 @@ const Login = () => {
       });
       return;
     } else {
-      fetch("http://localhost:5000/login", {
+      fetch("/login", {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

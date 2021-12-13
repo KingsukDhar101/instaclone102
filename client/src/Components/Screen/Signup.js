@@ -40,7 +40,7 @@ const Signup = () => {
         outDuration: 900,
       });
     } else {
-      fetch("http://localhost:5000/signup", {
+      fetch("/signup", {
         method: "post",
         headers: {
           "Content-Type": "application/json",

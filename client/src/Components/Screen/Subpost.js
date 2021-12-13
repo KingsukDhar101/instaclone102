@@ -10,7 +10,7 @@ const Subpost = () => {
   const { state, dispatch } = useContext(UserContext);
   const history = useHistory();
   useEffect(() => {
-    fetch("http://localhost:5000/getsubpost", {
+    fetch("/getsubpost", {
       headers: {
         Authorization: localStorage.getItem("jwt"),
       },
@@ -24,7 +24,7 @@ const Subpost = () => {
   }, []);
 
   const likePost = (id) => {
-    fetch("http://localhost:5000/like", {
+    fetch("/like", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const Subpost = () => {
   };
 
   const unlikePost = (id) => {
-    fetch("http://localhost:5000/unlike", {
+    fetch("/unlike", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -76,7 +76,7 @@ const Subpost = () => {
   };
 
   const lovePost = (id) => {
-    fetch("http://localhost:5000/love", {
+    fetch("/love", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -102,7 +102,7 @@ const Subpost = () => {
   };
 
   const unlovePost = (id) => {
-    fetch("http://localhost:5000/unlove", {
+    fetch("/unlove", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -128,7 +128,7 @@ const Subpost = () => {
   };
 
   const makeComment = (text, postId) => {
-    fetch("http://localhost:5000/comment", {
+    fetch("/comment", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -156,7 +156,7 @@ const Subpost = () => {
   };
 
   const deletePost = async (postId) => {
-    fetch(`http://localhost:5000/deletePost/${postId}`, {
+    fetch(`/deletePost/${postId}`, {
       method: "delete",
       headers: {
         Authorization: localStorage.getItem("jwt"),

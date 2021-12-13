@@ -14,7 +14,7 @@ const Profile = () => {
   // console.log("Home.js --> State = ", state);
   useEffect(() => {
     console.log("useEffect called!");
-    fetch("http://localhost:5000/mypost", {
+    fetch("/mypost", {
       headers: {
         Authorization: localStorage.getItem("jwt"),
       },
@@ -41,7 +41,7 @@ const Profile = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          fetch("http://localhost:5000/updatepic", {
+          fetch("/updatepic", {
             method: "put",
             headers: {
               "Content-Type": "application/json",
