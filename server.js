@@ -1,7 +1,7 @@
 const express = require("express");
 const CORS = require("cors");
 const app = express();
-const PORT = process.env.port || 5000;
+const PORT = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 const { MONGOURL } = require("./config/keys");
 
@@ -32,6 +32,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server started at ${PORT}`);
 });
